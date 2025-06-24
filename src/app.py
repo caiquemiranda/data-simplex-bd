@@ -9,7 +9,8 @@ import numpy as np
 from streamlit_option_menu import option_menu
 
 #internals
-from uploadDados import upload
+from uploadDados.upload import uploadDados
+from viz.viz import vizData
 
 
 with st.sidebar:
@@ -23,10 +24,10 @@ with st.sidebar:
 )
 
 if selected == "Upload dados":
-    upload()
+    uploadDados()
 
 if selected == "Viz BD":
-    st.header('Aqui voce encontra os Bancos')
+    vizData()
 
 if selected == "Historico":
     st.header('Aqui voce encontra os cards')
