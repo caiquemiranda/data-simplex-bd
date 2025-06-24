@@ -11,6 +11,7 @@ from streamlit_option_menu import option_menu
 #internals
 from uploadDados.upload import uploadDados
 from viz.viz import vizData
+from history.history import historyData
 
 
 with st.sidebar:
@@ -30,4 +31,4 @@ if selected == "Viz BD":
     vizData()
 
 if selected == "Historico":
-    st.header('Aqui voce encontra os cards')
+    historyData()
