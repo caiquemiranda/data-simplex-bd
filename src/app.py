@@ -8,6 +8,9 @@ import numpy as np
 #import streamlit_option_menu
 from streamlit_option_menu import option_menu
 
+#internals
+from uploadDados import upload
+
 
 with st.sidebar:
     selected = option_menu(
@@ -20,7 +23,7 @@ with st.sidebar:
 )
 
 if selected == "Upload dados":
-    st.header('Faça o Upload dos dados aqui:')
+    upload()
 
 if selected == "Viz BD":
     st.header('Aqui voce encontra os Bancos')
