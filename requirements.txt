@@ -2,3 +2,6 @@ streamlit==1.46.0
 pandas
 plotly
 openpyxl
+streamlit-option-menu
+streamlit
+snowflake-connector-python
