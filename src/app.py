@@ -24,12 +24,20 @@ with st.sidebar:
     #orientation = "horizontal",
 )
 
+def tratamento():
+    file = st.file_uploader("Escolha um arquivo CSV", type=["csv"])
+    pd.DataFrame(file)
+
+    return st.dataframe(file)
+
 if selected == "Upload dados":
     uploadDados()
-    rawDataDefalt()
+    tratamento()
 
 if selected == "Viz BD":
     vizData()
+    file = 'src/dataBase/dataModeling/dataTests/rawData2.csv'
+    rawDataDefalt(file)
 
 if selected == "Historico":
     historyData()
