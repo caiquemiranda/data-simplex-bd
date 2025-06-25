@@ -1,22 +1,25 @@
 import pandas as pd
+import streamlit as st
 
 
-rawData = pd.read_csv()
+def rawDataDefalt():
+    rawData = pd.read_csv(
+        'dataTests/rawData2.csv', 
+        encoding='latin-1',
+        #sep=',',
+        header=None,
+        )
 
-"""
-tratamento dos dados(patern)
-column1 = panel_address
-column2 = type_device
-column3 = action
-column4 = description
+    rawData = pd.DataFrame(rawData)
+    rawData.columns = [f"Column{i+1}" for i in range(rawData.shape[1])]
+    rawData = rawData[['Column1', 'Column2', 'Column3', 'Column4']]
+    rawData.rename(columns={
+        'Column1' : 'panel_adress', 
+        'Column2' : 'type_device',
+        'Column3' : 'action',
+        'Column4' : 'description'
+    }, inplace=True)
 
-"""
-rawData = pd.DataFrame(rawData)
-rawData = rawData[['column1', 'column2', 'column3', 'column4']]
+    rawData.set_index('panel_adress', inplace=True)
 
-rawData.rename(columns={
-    'column1' : 'panel_adress', 
-    'column2' : 'type_device',
-    'column3' : 'action',
-    'column4' : 'description'
-})
+    return st.dataframe(rawData)

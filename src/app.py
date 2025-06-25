@@ -12,7 +12,7 @@ from streamlit_option_menu import option_menu
 from uploadDados.upload import uploadDados
 from viz.viz import vizData
 from history.history import historyData
-
+from dataBase.dataModeling.rawData import rawDataDefalt
 
 with st.sidebar:
     selected = option_menu(
@@ -26,6 +26,7 @@ with st.sidebar:
 
 if selected == "Upload dados":
     uploadDados()
+    rawDataDefalt()
 
 if selected == "Viz BD":
     vizData()
