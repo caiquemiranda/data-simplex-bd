@@ -21,7 +21,6 @@ with st.sidebar:
     icons = ["house","gear","activity"],
     menu_icon = "cast",
     default_index = 0,
-    #orientation = "horizontal",
 )
 
 def tratamento():
