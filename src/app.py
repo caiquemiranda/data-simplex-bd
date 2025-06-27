@@ -13,6 +13,7 @@ from uploadDados.upload import uploadDados
 from viz.viz import vizData
 from history.history import historyData
 from dataBase.dataModeling.rawData import rawDataDefalt
+from uploadDados.upload import tratamentoUpload
 
 with st.sidebar:
     selected = option_menu(
@@ -23,15 +24,9 @@ with st.sidebar:
     default_index = 0,
 )
 
-def tratamento():
-    file = st.file_uploader("Escolha um arquivo CSV", type=["csv"])
-    pd.DataFrame(file)
-
-    return st.dataframe(file)
-
 if selected == "Upload dados":
     uploadDados()
-    tratamento()
+    tratamentoUpload()
 
 if selected == "Viz BD":
     vizData()
