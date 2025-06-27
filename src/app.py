@@ -15,6 +15,7 @@ from history.history import historyData
 from dataBase.dataModeling.rawData import rawDataDefalt
 from uploadDados.upload import tratamentoUpload
 
+
 with st.sidebar:
     selected = option_menu(
     menu_title = "Main Menu",
