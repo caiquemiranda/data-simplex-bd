@@ -28,6 +28,8 @@ if selected == "Upload dados":
 
 if selected == "Viz BD":
     st.header('Viz BD')
+    rawData = pd.read_csv(data_source)
+    st.write(rawData)
     
 
 if selected == "Historico":
