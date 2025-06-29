@@ -4,8 +4,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-#import snowflake.connector
-#import streamlit_option_menu
 from streamlit_option_menu import option_menu
 
 data_source = "data/rawData2.csv"
