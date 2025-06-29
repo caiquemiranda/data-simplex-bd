@@ -4,11 +4,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
-import snowflake.connector
-import streamlit_option_menu
+#import snowflake.connector
+#import streamlit_option_menu
 from streamlit_option_menu import option_menu
 
-data_source = "srcRaw\data\rawData2.csv"
+data_source = "data/rawData2.csv"
 
 with st.sidebar:
     selected = option_menu(
@@ -28,9 +28,12 @@ if selected == "Upload dados":
 
 if selected == "Viz BD":
     st.header('Viz BD')
-    rawData = pd.read_csv(data_source)
+
+    rawData = pd.read_csv(
+    filepath_or_buffer = data_source,
+    encoding='latin-1',
+    header=None,)
     st.write(rawData)
     
-
 if selected == "Historico":
     st.header('Historico')
