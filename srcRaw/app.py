@@ -27,6 +27,8 @@ if selected == "Upload dados":
         st.write(rawData)
 
 if selected == "Viz BD":
+    st.header('Viz BD')
     
 
 if selected == "Historico":
+    st.header('Historico')
