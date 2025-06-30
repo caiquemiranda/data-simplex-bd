@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-def rawDataDefalt(file):
+def raw_data_defalt(file):
     rawData = pd.read_csv(
         filepath_or_buffer = file,
         #'dataTests/rawData2.csv', 

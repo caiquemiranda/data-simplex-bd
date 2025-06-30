@@ -9,11 +9,11 @@ import numpy as np
 from streamlit_option_menu import option_menu
 
 #internals
-from uploadDados.upload import uploadDados
-from viz.viz import vizData
-from history.history import historyData
-from dataBase.dataModeling.rawData import rawDataDefalt
-from uploadDados.upload import tratamentoUpload
+from upload_dados.upload import upload_dados
+from viz.viz import viz_data
+from history.history import history_data
+from data_base.data_modeling.raw_data import raw_data_defalt
+from upload_dados.upload import tratamento_upload
 
 
 with st.sidebar:
@@ -26,13 +26,13 @@ with st.sidebar:
 )
 
 if selected == "Upload dados":
-    uploadDados()
-    tratamentoUpload()
+    upload_dados()
+    tratamento_upload()
 
 if selected == "Viz BD":
-    vizData()
+    viz_data()
     file = 'src/dataBase/dataModeling/dataTests/rawData2.csv'
-    rawDataDefalt(file)
+    raw_data_defalt(file)
 
 if selected == "Historico":
-    historyData()
+    history_data()
